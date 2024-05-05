@@ -3,6 +3,7 @@ package main.java.com.magicvet.service;
 import main.java.com.magicvet.Main;
 import main.java.com.magicvet.model.Dog;
 import main.java.com.magicvet.model.Pet;
+
 public class PetService {
     private static String DOG_TYPE = "dog";
 
@@ -19,26 +20,7 @@ public class PetService {
         }
 
         return pet;
-    }
-
-    private Dog buildDog() {
-        Pet pet = buildPet(DOG_TYPE);
-        Dog dog = petToDog(pet);
-
-        System.out.print("Size (xS / S / M / L / xxL): ");
-        dog.setSize(Main.SCANNER.nextLine());
-
-        return dog;
-    }
-
-    private Dog petToDog(Pet pet) {
-        Dog dog = new Dog();
-        dog.setAge(pet.getAge());
-        dog.setName(pet.getName());
-        dog.setSex(pet.getSex());
-
-        return dog;
-    }
+    }//registerNewPet
 
     private Pet buildPet(String type) {
         Pet pet = new Pet();
@@ -54,6 +36,25 @@ public class PetService {
         pet.setSex(Main.SCANNER.nextLine());
 
         return pet;
-    }
+    }//buildPet
+
+    private Dog buildDog() {
+        Pet pet = buildPet(DOG_TYPE);
+        Dog dog = petToDog(pet);
+
+        System.out.print("Size (xS / S / M / L / xxL): ");
+        dog.setSize(Main.SCANNER.nextLine());
+
+        return dog;
+    }//buildDog
+
+    private Dog petToDog(Pet pet) {
+        Dog dog = new Dog();
+        dog.setAge(pet.getAge());
+        dog.setName(pet.getName());
+        dog.setSex(pet.getSex());
+
+        return dog;
+    }//petToDog
 
 }//PetService
