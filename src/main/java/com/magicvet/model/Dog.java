@@ -17,6 +17,12 @@ public class Dog extends Pet {
     public Dog(String size) {
         this.size = size;
     }
+    public Dog(String name, String age, String sex, String size){ //NEW
+        super.setName(name);
+        super.setAge(age);
+        super.setSex(sex);
+        this.size = size;
+    }
     @Override
     public String toString() {
         return "Dog{" +
