@@ -8,6 +8,7 @@ public abstract class Pet {
     private String age;
     private String name;
     private String ownerName;
+    private HealthState healthState;
 
     @Override
     public String toString() {
@@ -16,6 +17,7 @@ public abstract class Pet {
                 ", age='" + age + '\'' +
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
+                ", healthState='" + healthState + '\'' +
                 ", ownerName='" + ownerName + '\'' +
                 '}';
     }
@@ -75,4 +77,29 @@ public abstract class Pet {
         this.ownerName = ownerName;
     }
 
+    public void setHealthState(HealthState healthState) {
+        this.healthState = healthState;
+    }
+
+    public HealthState getHealthState() {
+        return healthState;
+    }
+
+    public enum HealthState{
+        RED(1),
+        YELLOW(2),
+        GREEN(3),
+        UNKNOWN(0);
+
+        private final int value;
+
+        HealthState(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+    }//enum HealthState
 }//Pet
