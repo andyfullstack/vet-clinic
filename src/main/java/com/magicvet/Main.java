@@ -1,10 +1,6 @@
 package main.java.com.magicvet;
 
-//import main.java.com.magicvet.model.Client;
-
 import java.util.Scanner;
-//import java.util.regex.Matcher;
-//import java.util.regex.Pattern;
 import main.java.com.magicvet.component.ApplicationRunner;
 
 public class Main {
