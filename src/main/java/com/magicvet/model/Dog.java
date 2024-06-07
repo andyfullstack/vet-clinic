@@ -18,6 +18,7 @@ public class Dog extends Pet {
         super.setHealthState(healthState);
         this.size = size;
     }
+/*
     @Override
     public String toString() {
         return "Dog{" +
@@ -29,6 +30,7 @@ public class Dog extends Pet {
                 ", ownerName='" + super.getOwnerName() + '\'' +
                 '}';
     }
+*/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
