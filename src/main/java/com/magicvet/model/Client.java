@@ -87,8 +87,21 @@ public class Client {
     }
 
     public enum Location {
-        KYIV, LVIV, ODESA, UNKNOWN
-    }
+        KYIV, LVIV, ODESA, UNKNOWN;
+
+        public static Location fromString(String value) {
+            for (Location loc : values()) {
+                if (loc.toString().equals(value)) {
+                    return loc;
+                }
+            }
+
+            System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
+
+            return UNKNOWN;
+        }//fromString
+
+    }//enum Location
 
 
 }//Client

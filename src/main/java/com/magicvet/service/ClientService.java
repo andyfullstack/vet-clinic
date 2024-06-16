@@ -53,7 +53,7 @@ public class ClientService {
         String locationInput = Main.SCANNER.nextLine();
 
         try {
-            location = Client.Location.valueOf(locationInput);
+            location = Client.Location.fromString(locationInput);
         } catch (IllegalArgumentException e) {
             location = Client.Location.UNKNOWN;
             System.out.println("Unable to parse value '" + locationInput
