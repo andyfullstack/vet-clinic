@@ -51,14 +51,14 @@ public class ClientService {
         System.out.print("Location: ");
         Client.Location location;
         String locationInput = Main.SCANNER.nextLine();
-
-        try {
-            location = Client.Location.fromString(locationInput);
-        } catch (IllegalArgumentException e) {
-            location = Client.Location.UNKNOWN;
-            System.out.println("Unable to parse value '" + locationInput
-                    + "'. Using default value: " + Client.Location.UNKNOWN);
-        }
+        location = Client.Location.fromString(locationInput);
+//        try {
+//            location = Client.Location.fromString(locationInput);
+//        } catch (IllegalArgumentException e) {
+//            location = Client.Location.UNKNOWN;
+//            System.out.println("Unable to parse value '" + locationInput
+//                    + "'. Using default value: " + Client.Location.UNKNOWN);
+//        }
         client.setLocation(location);
         return client;
     }//buildClient()

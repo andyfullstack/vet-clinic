@@ -96,7 +96,8 @@ public class Client {
                 }
             }
 
-            System.out.println("Unable to parse value '" + value + "'. Using default value: " + UNKNOWN);
+            System.out.println("Unable to parse value '" + value
+                    + "'. Using default value: " + UNKNOWN);
 
             return UNKNOWN;
         }//fromString

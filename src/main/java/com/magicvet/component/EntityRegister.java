@@ -32,8 +32,13 @@ public class EntityRegister {
     private Client addClient() {
         Client client = clientService.registerNewClient();
         if (client != null) {
+            System.out.print("Do you want add your pet now? (y/n): ");
+            //char addPet = Main.SCANNER.next().charAt(0);;
+            char addPet = Main.SCANNER.nextLine().charAt(0);;
+            if (addPet=='y' || addPet=='Y') {
             registerPets(client);
             System.out.println(client);
+            }
         }
         return client;
     }//addClient()
